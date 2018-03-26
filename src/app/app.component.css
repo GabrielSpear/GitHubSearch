@@ -1,0 +1,50 @@
+.allb {
+  background-image: url("../assets/img/git5s.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 1020px 200px;
+}
+
+h1 {
+  color: green;
+  background-color: #3ae4ff;
+}
+
+.boody {
+  height: 100vh;
+  background-image: url("../assets/img/git6s.jpg");
+  color: white;
+}
+
+.navbar-default {
+  width: 100.2%;
+}
+
+.img1 {
+  position: absolute;
+  top: 80px;
+  right: 0px;
+  width: 131px;
+}
+
+.img2 {
+  position: left;
+  top: 0px;
+  left: 0px;
+  width: 131px;
+}
+
+#git {
+  font-family: 'Russo One', sans-serif;
+  text-align: center;
+  font-size: 73px;
+}
+
+.name {
+  width: 50%;
+  margin: 10% auto 0;
+  background-color: #3ae4ff;
+  color: #fff;
+  font-size: 1em;
+  padding: 3px 0;
+}
