@@ -10,7 +10,6 @@ export class ProfileService {
   access_token =environment.apiUrl;
 
 constructor(private http:HttpClient) {
-    console.log('GabrielSpear is on fire')
 
   }
 
