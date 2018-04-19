@@ -2,17 +2,13 @@
   align-items: center;
 }
 
-html, body {
-  font-family: 'Arial', sans-serif;
-  font-size: 16px;
-}
-
 /* search bar container */
 
 .search-container {
   display: table;
-  position: relative;
-  width: 100%;
+  position: center;
+  width: 20%;
+  background-color: gray;
 }
 
 /* search icon button */
@@ -51,26 +47,10 @@ html, body {
   width: 200px;
 }
 
-/* transition effect */
-
-.search-input input.search-bar, .search-icon-btn {
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
 /* hover on search bar container */
 
 .search-container:hover>.search-input input.search-bar {
   padding-left: 60px;
   padding-right: 10px;
   width: 200px;
-}
-
-.bbackground {
-  background-image: url("../../assets/img/git5s.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }

@@ -9,70 +9,58 @@
   </div>
 </div>
 
-<div class="bbackground">
+<div *ngIf="user">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{user.login}}</h3>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-4">
+          <img class="img-thumbnail github-avatar" src="{{user.avatar_url}}" alt="">
+        </div>
 
-  <div *ngIf="user">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">{{user.login}}</h3>
-      </div>
-      <div class="panel-body">
-        <div class="row">
-          <div class="col-md-4">
-            <img class="img-thumbnail github-avatar" src="{{user.avatar_url}}" alt="">
-          </div>
+        <div class="col-md-8">
+          <div class="stats">
+            <span class="label label-default">{{user.public_repos}}  public repos</span>
+            <span class="label label-primary">{{user.public_gist}} public gist</span>
+            <span class="label label-success">{{user.followers}} followers</span>
+            <span class="label label-info">{{user.following}} following</span>
 
-          <div class="col-md-8">
-            <div class="stats">
-              <span class="label label-default">{{user.public_repos}}  public repos</span>
-              <span class="label label-primary">{{user.public_gist}} public gist</span>
-              <span class="label label-success">{{user.followers}} followers</span>
-              <span class="label label-info">{{user.following}} following</span>
+          </div><br>
 
-            </div><br>
-
-            <ul class="list-group">
-              <li class="list-group-items"> <strong>username :</strong> {{user.login}} </li>
-              <li class="list-group-items"> <strong>location :</strong> {{user.location}} </li>
-              <li class="list-group-items"> <strong>Email :</strong> {{user.email}} </li>
-              <li class="list-group-items"> <strong>blog :</strong> {{user.blog}} </li>
-              <li class="list-group-items"> <strong>member since :</strong> {{user.created_at}} </li>
-
-            </ul>
-
-          </div>
-
+          <ul class="list-group">
+            <li class="list-group-items"> <strong>username :</strong> {{user.login}} </li>
+            <li class="list-group-items"> <strong>location :</strong> {{user.location}} </li>
+            <li class="list-group-items"> <strong>Email :</strong> {{user.email}} </li>
+            <li class="list-group-items"> <strong>blog :</strong> {{user.blog}} </li>
+            <li class="list-group-items"> <strong>member since :</strong> {{user.created_at}} </li>
+          </ul>
         </div>
       </div>
     </div>
-
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">repos</h3>
-      </div>
-      <div class="panel-body">
-        <div class="row">
-          <div class="col-md-12">
-            <div *ngFor="let repo of repos">
-              <div class="row">
-                <div class="col-md-9">
-                  <h4> <a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a> </h4>
-                  <p>{{repo.description}}</p>
-                </div>
-                <div class="col-md-3">
-                  <span class="label label-default">{{repo.watchers}}  watcher</span>
-                  <span class="label label-primary">{{repo.forks}} forks</span>
-
-                </div>
-
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">repos</h3>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-12">
+          <div *ngFor="let repo of repos">
+            <div class="row">
+              <div class="col-md-9">
+                <h4> <a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a> </h4>
+                <p>{{repo.description}}</p>
+              </div>
+              <div class="col-md-3">
+                <span class="label label-default">{{repo.watchers}}  watcher</span>
+                <span class="label label-primary">{{repo.forks}} forks</span>
               </div>
             </div>
-
           </div>
-
         </div>
       </div>
     </div>
-
   </div>
 </div>
